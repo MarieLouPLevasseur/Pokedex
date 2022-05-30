@@ -3,6 +3,8 @@
 
 namespace App\Controllers;
 
+use App\Models\Pokemon;
+
 class MainController extends CoreController
 {
     //==============================================
@@ -19,7 +21,20 @@ class MainController extends CoreController
     
     public function home()
     {
-        $this->show( "home",[]);
+
+      // j'initie un modele objet pour chaque table dont j'ai besoin de récupérer des données
+      $pokemonModel= new Pokemon();
+
+      // permet de récupérer les données de TOUS les Pokémons (par défaut selon leur ID)
+      $allPokemons= $pokemonModel->findAll();
+
+      //Je transmet les données à la vue via la méthode show afin de les rendre disponibles
+
+
+        $this->show( "home",[
+            "allPokemons" => $allPokemons,
+
+        ]);
 
     }
 
@@ -32,6 +47,8 @@ class MainController extends CoreController
         
       echo "Page du Personnage #".$url_params['Pokemon_id'];
 
-      $this->show( "detail", [] );      
+
+      $this->show( "detail", [
+      ] );      
     }
 }

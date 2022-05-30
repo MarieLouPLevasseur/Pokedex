@@ -22,6 +22,7 @@ body{
 
 .nav-link{
     color: #C14040;
+    text-decoration: none;
 
 }
 
@@ -79,7 +80,86 @@ body{
 
 .image-title{
     text-align: center;
+
 }
 .image-title a{
     color: white;
+    font-family: 'Bree Serif', serif;
+
+}
+
+/* Personnage SOLO */
+
+.Solo-card{
+    color: white;
+    width: 100%;
+    margin-right: 50px;
+
+}
+
+.Solo-card h1{
+    text-align: center;
+}
+.Solo-card .container{
+    display: flex;
+    flex-direction: row;
+    margin-right: 50px;
+}
+
+
+.image-current{
+    width:40%;
+    align-self: center;
+}
+
+.card-container{
+    width: 60%;
+    background-color: rgb(49, 48, 48,0.3);
+    padding: 15px;
+    padding-bottom: 20px ;
+    border-radius: 10px;
+    /* opacity: 0.3 ; */
+}
+.image-current img{
+    width: 100%;
+    height: auto;
+}
+
+.type-item{
+    display: inline-block;
+    margin: 3px;
+    border-radius: 5px;
+    padding: 12px;
+    padding-top: 9px ;
+    padding-bottom: 9px ;
+    font-size: 0.8em;
+}
+.Solo-card h4{
+    font-weight: bold;
+
+}
+
+.stats-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.stat-line{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    margin-right: 50px;
+    line-height: 0.2em;
+    font-size: 0.9em;
+}
+
+.Solo-card .return{
+    text-align: center;
+}
+.Solo-card .return a{
+    text-align: center;
+    color: white;
+    text-decoration: none;
 }
