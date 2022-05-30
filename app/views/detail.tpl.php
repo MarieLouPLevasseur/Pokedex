@@ -3,54 +3,67 @@
 
     <div class="container">
         <div class="image-current">
-            <img src="<?= $transversalVars['baseURL']?>/img/5.png" alt="">
+            <img src="<?= $transversalVars['baseURL'] ?>/img/5.png" alt="">
         </div>
 
         <div class="card-container">
             <h3># PERSO et NOM PERSONNAGE</h2>
-<!-- TYPES -->
-            <p class="type-item" style="background-color:#NOM COULEUR TYPE">TYPE PERSONNAGE</p>
+                <!-- TYPES -->
+                <p class="type-item" style="background-color:#NOM COULEUR TYPE">TYPE PERSONNAGE</p>
 
-<!-- ------- -->
+                <!-- ------- -->
 
-            <h4>Statistiques</h4>
-        <div class="stats-container">
-            
-            <div class="stat-line">
-                <p>PV</p>
-                <p>VALEUR PV</p>
-                <p>BARRE DE VIE</p>
-            </div>
+                <h4>Statistiques</h4>
+                <div class="stats-container">
 
-            <div class="stat-line">
-                <p>Attaque</p>
-                <p>VALEUR ATTAQUE</p>
-                <p>BARRE DE VIE</p>
-            </div>
-            <div class="stat-line">
-                <p>Défense</p>
-                <p>VALEUR Défense</p>
-                <p>BARRE DE VIE</p>
-            </div>
-            <div class="stat-line">
-                <p>Attaque spé.</p>
-                <p>VALEUR Attaque spé.</p>
-                <p>BARRE DE VIE</p>
-            </div>
+                    <div class="stat-line">
+                        <p class="stat-name">PV</p>
+                        <p class="stat-value">VALEUR PV</p>
+                        <div class="lifebar">
+                            <div class="progress" style="width:90%"></div>
+                            <div class="total" style="width:10%"></div>
+                        </div>                    </div>
 
-            <div class="stat-line">
-                <p>Défense spé.</p>
-                <p>VALEUR Défense spé.</p>
-                <p>BARRE DE VIE</p>
-            </div>
-            <div class="stat-line">
-                <p>Vitesse</p>
-                <p>VALEUR Vitesse</p>
-                <p>BARRE DE VIE</p>
-            </div>
-        </div>
+                    <div class="stat-line">
+                        <p  class="stat-name">Attaque</p>
+                        <p class="stat-value">VALEUR ATTAQUE</p>
+                        <div class="lifebar">
+                            <div class="progress" style="width:60%"></div>
+                            <div class="total" style="width:40%"></div>
+                        </div>                    </div>
+                    <div class="stat-line">
+                        <p class="stat-name">Défense</p>
+                        <p class="stat-value">VALEUR Défense</p>
+                        <div class="lifebar">
+                            <div class="progress"style=" width:60%"></div>
+                            <div class="total"style=" width:40%"></div>
+                        </div>                    </div>
+                    <div class="stat-line">
+                        <p  class="stat-name">Attaque spé.</p>
+                        <p class="stat-value">VALEUR Attaque spé.</p>
+                        <div class="lifebar">
+                            <div class="progress" style="width:60%"></div>
+                            <div class="total" style="width:40%"></div>
+                        </div>                    </div>
+
+                    <div class="stat-line">
+                        <p  class="stat-name">Défense spé.</p>
+                        <p class="stat-value">VALEUR Défense spé.</p>
+                        <div class="lifebar">
+                            <div class="progress" style="width:60%"></div>
+                            <div class="total" style="width:40%"></div>
+                        </div>                    </div>
+                    <div class="stat-line">
+                        <p  class="stat-name">Vitesse</p>
+                        <p class="stat-value">VALEUR Vitesse</p>
+                        <div class="lifebar">
+                            <div class="progress" style="width:60%"></div>
+                            <div class="total" style="width:40%"></div>
+                        </div>
+                    </div>
+                </div>
         </div>
     </div>
     <p class="return"><a href="#"> Revenir à la liste</a></p>
- 
-  </section>
+
+</section>
