@@ -2,6 +2,7 @@
 
 *{
     font-family: 'Bree Serif', serif;
+    box-sizing: border-box;
 }
 
 
@@ -43,4 +44,42 @@ body{
     text-align: right;
     font-size: 0.8em;
 
+}
+
+/* Cartes image */
+
+.content{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+
+}
+
+.image-item img{
+
+    width: 100%;
+    height: auto;
+}
+
+.image-card{
+    width: calc((100%/3.5));
+    padding: 15px;
+    background-color: #982C2C;
+    border-radius: 15px;
+    margin: 10px;
+}
+
+.image-item{
+
+    /* overflow: hidden; */
+    height: auto;
+    width: 100%;
+
+}
+
+.image-title{
+    text-align: center;
+}
+.image-title a{
+    color: white;
 }
