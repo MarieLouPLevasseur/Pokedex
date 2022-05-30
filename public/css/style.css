@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap');
+
+*{
+    font-family: 'Bree Serif', serif;
+}
+
+
+body{
+    background-color: #C14040;
+}
+
+/* barre navigation Header */
+.nav{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    background-color: white;
+    border-radius: 15px;
+
+}
+
+.nav-link{
+    color: #C14040;
+
+}
+
+.nav-item{
+    list-style: none;
+    display: block;
+    width: 100%;
+    margin-right: 30px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+
+}
+
+.nav :first-child{
+    text-align: left;
+    font-size: 1.2em;
+}
+
+.nav :nth-child(2){
+    text-align: right;
+    font-size: 0.8em;
+
+}

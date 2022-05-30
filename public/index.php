@@ -51,7 +51,8 @@ $methodToCall            = $matchingRouteInfos['target']['method'];
 // die;
 
 // On instancie notre controller dynamiquement a partir du nom qui se trouve dans la variable $controllerToInstantiate (soit MainController par défaut ici)
-$controller = new $controllerToInstantiate();
+// J'ajoute le paramètre $router pour facilité la mise en place des liens dynamique
+$controller = new $controllerToInstantiate($router);
 
 // On appelle la méthode dont le nom se trouve dans $methodToCall sur MainController et on lui transmet les Params d'URL lorsqu'il y en a
 $controller->$methodToCall( $matchingRouteInfos['params'] );
