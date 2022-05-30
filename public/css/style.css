@@ -103,23 +103,25 @@ body{
 .Solo-card .container{
     display: flex;
     flex-direction: row;
-    margin-right: 50px;
+    /* margin-right: 50%; */
     width: 100%;
+    /* margin: 50px; */
 }
 
 
 .image-current{
     width:40%;
     align-self: center;
+    margin: 15px;
 }
 
 .card-container{
     width: 60%;
     background-color: rgb(49, 48, 48,0.2);
     padding: 15px;
-    padding-bottom: 20px ;
+    padding-bottom: 35px ;
     border-radius: 10px;
-    /* opacity: 0.3 ; */
+    margin: 20px;
 }
 .image-current img{
     width: 100%;
@@ -161,12 +163,13 @@ body{
 }
 .stat-value{
     width: 20%;
+    text-align: center;
 }
 
-/* barre de stats progressive */
+/*---------- barre de stats progressive ------------*/
 .lifeBar{
     width: 250px;
-    height: 13px;
+    height: 20px;
     display: flex;
     flex-direction: row;
     margin: auto;
@@ -174,15 +177,18 @@ body{
 
 .total{
     /* width: 30%; */
-    background-color: black;
-    border-radius: 2px;
+    background-color: rgba(17, 17, 17, 0.3);
+    border-top-right-radius: 5px ;
+    border-bottom-right-radius: 5px ;
+    
 }
 
 
 .progress {
     background-color: White;
     /* width: 70%; */
-    border-radius: 2px;
+    border-bottom-left-radius: 5px ;
+    border-top-left-radius: 5px ;
 
     /* display: inline-block; */
 }

@@ -47,8 +47,16 @@ class MainController extends CoreController
         
       echo "Page du Personnage #".$url_params['Pokemon_id'];
 
+    // j'initie un modele objet pour chaque table dont j'ai besoin de récupérer des données
+    $pokemonModel= new Pokemon();
+
+    // permet de récupérer les données D'UN Pokemon ciblé par son ID
+    $currentPokemon= $pokemonModel->find($url_params['Pokemon_id']);
+
 
       $this->show( "detail", [
+        "currentPokemon" => $currentPokemon,
+
       ] );      
     }
 }
