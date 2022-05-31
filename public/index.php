@@ -37,7 +37,12 @@ $router->map( "GET", "/type_list",[
     ]
     ,  "main-type_list" );
 
-
+//TYPE: UN type
+$router->map( "GET", "/type/[i:type_id]",[
+    "method"     => "type", //nom de la méthode a appeler
+    "controller" => "App\Controllers\MainController" //controller a appeler via le namespace
+    ]
+    , "main-type");
 
 // faire correspondre une URL et une route: il faut faire un match
 $matchingRouteInfos = $router->match();

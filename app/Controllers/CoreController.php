@@ -2,6 +2,8 @@
  
   namespace App\Controllers;
 
+use App\Models\Pokemon;
+
 class CoreController
 {
           //------------------permet de gérer l'affichage des templates communs et des données utiles (pour l'instant) --------------
@@ -45,7 +47,9 @@ class CoreController
      foreach ($transversalVars as $viewVarName=>$viewVarValue) {
          $viewData[$viewVarName] = $viewVarValue;
      }
-     
+
+    
+
         d(get_defined_vars());
 
         require_once __DIR__ . '/../views/header.tpl.php';

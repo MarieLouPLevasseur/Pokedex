@@ -79,6 +79,34 @@ protected $name;
     // d( $objects );
     return $objects;
   }
+
+
+    /**
+     * Méthode qui retourne tout les objets Type selon type_id
+     * @return self[] Un tableau d'objets Type
+     */
+    public function findAllTypeByID($type_id)
+    {
+    // on peut récupérer directement des objets dans le tableau retourné par PDO
+      $pdo = Database::getPDO();
+
+    // Je récupère le nom de la classe actuel (qui hérite de CoreModel)
+      $class_name = get_class( $this );
+
+    // Requête SQL et execution
+    $sql = "SELECT number,pokemon.id as pokemon_id, type.id as type_id,pokemon.name
+    FROM pokemon JOIN pokemon_type 
+    ON pokemon.number = pokemon_type.pokemon_number
+    JOIN type
+    ON pokemon_type.type_id = type.id
+    WHERE $type_id=type_id";
+
+    $pdoStatement = $pdo->query( $sql );
+
+    $objects = $pdoStatement->fetchAll( PDO::FETCH_CLASS, $class_name );
+    // d( $objects );
+    return $objects;
+  }
 //========================================
 // Getters & Setters
 //========================================

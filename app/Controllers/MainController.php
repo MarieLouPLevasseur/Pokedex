@@ -69,7 +69,7 @@ class MainController extends CoreController
       $this->show( "detail", [
         "currentPokemon"         => $currentPokemon,
         "allTypesCurrentPokemon" => $allTypesCurrentPokemon,
-
+        // "allPokemonByType"       => $allPokemonByType,
       ] );      
     }
 
@@ -93,6 +93,30 @@ class MainController extends CoreController
 
       $this->show( "type_list", [
         "allTypes"=> $allTypes,
+      ] );      
+    }
+
+    //==============================================
+    //        TYPE: page d'un type précis
+    //==============================================
+
+    public function type($url_params)
+    {
+        
+      // echo "Page d'un Type #".$url_params['type_id'];
+
+    // j'initie un modele objet pour chaque table dont j'ai besoin de récupérer des données
+    $pokemonModel =new Type();
+
+
+    // permet de récupérer Tous les Types
+    $allPokemonByType= $pokemonModel->findAllTypeByID($url_params['type_id']);
+
+
+    
+
+      $this->show( "type", [
+        "allPokemonByType"=> $allPokemonByType,
       ] );      
     }
 }
