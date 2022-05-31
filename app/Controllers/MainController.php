@@ -82,12 +82,17 @@ class MainController extends CoreController
         
       echo "Page des Types";
 
-    
+    // j'initie un modele objet pour chaque table dont j'ai besoin de récupérer des données
+    $typeModel =new Type();
+
+    // permet de récupérer Tous les Types
+    $allTypes= $typeModel->findAll();
+
 
     
 
       $this->show( "type_list", [
-
+        "allTypes"=> $allTypes,
       ] );      
     }
 }
