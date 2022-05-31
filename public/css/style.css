@@ -202,3 +202,32 @@ body{
     color: white;
     text-decoration: none;
 }
+
+/* Page des Types */
+
+
+
+.types p{
+    color:white;
+}
+.types a{
+    color:white;
+    text-decoration: none;
+}
+
+.types-container{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.typeItem{
+    background-color: purple;
+    border-radius: 6px;
+    margin: 3px;
+    padding: 5px 50px 5px 50px;
+    text-align: center;
+    width: 24%;
+    font-size: 0.9em;
+
+}
