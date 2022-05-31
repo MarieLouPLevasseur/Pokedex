@@ -11,7 +11,11 @@
         <div class="card-container">
             <h3># <?= $viewData['currentPokemon']->getNumber() ?> <?= $viewData['currentPokemon']->getName() ?></h2>
                 <!-- TYPES -->
-                <p class="type-item" style="background-color:#NOM COULEUR TYPE">TYPE PERSONNAGE</p>
+<?php foreach ($viewData['allTypesCurrentPokemon'] as $currentType):?>
+    <p class="type-item" style="background-color:#<?=$currentType->getColor()?>"><?=$currentType->getName()?></p>
+
+
+            <?php endforeach?>
 
                 <!-- ------- -->
 
@@ -71,6 +75,6 @@
                 </div>
         </div>
     </div>
-    <p class="return"><a href="#"> Revenir à la liste</a></p>
+    <p class="return"><a href="<?=$viewData['router']->generate('main-home')?>"> Revenir à la liste</a></p>
 
 </section>

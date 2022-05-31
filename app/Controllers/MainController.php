@@ -4,6 +4,9 @@
 namespace App\Controllers;
 
 use App\Models\Pokemon;
+use App\Models\Pokemon_type;
+use App\Models\Type;
+
 
 class MainController extends CoreController
 {
@@ -49,13 +52,23 @@ class MainController extends CoreController
 
     // j'initie un modele objet pour chaque table dont j'ai besoin de récupérer des données
     $pokemonModel= new Pokemon();
+    $typeModel =new Type();
 
     // permet de récupérer les données D'UN Pokemon ciblé par son ID
     $currentPokemon= $pokemonModel->find($url_params['Pokemon_id']);
 
+    // permet de récupérer le numéro du Pokemon ciblé  
+    $currentPokemon_Number=$currentPokemon->getNumber();
+    // d($currentPokemon_Number);
+   
+    // permet de récupérer tous les Types d'un pokemon ciblé
+    $allTypesCurrentPokemon = $typeModel->findAllTypesByNumber($currentPokemon_Number);
+
+    
 
       $this->show( "detail", [
-        "currentPokemon" => $currentPokemon,
+        "currentPokemon"         => $currentPokemon,
+        "allTypesCurrentPokemon" => $allTypesCurrentPokemon,
 
       ] );      
     }

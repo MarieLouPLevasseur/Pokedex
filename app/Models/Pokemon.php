@@ -2,6 +2,8 @@
 
 namespace App\Models;
 
+use App\Utils\Database;
+use PDO;
 
 class Pokemon extends CoreModel
 {
