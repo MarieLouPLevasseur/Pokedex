@@ -72,4 +72,22 @@ class MainController extends CoreController
 
       ] );      
     }
+
+    //==============================================
+    //        TYPE_LIST: page des types
+    //==============================================
+
+    public function type_list()
+    {
+        
+      echo "Page des Types";
+
+    
+
+    
+
+      $this->show( "type_list", [
+
+      ] );      
+    }
 }

@@ -23,12 +23,20 @@ $router->map( "GET", "/", [
     "controller" => "App\Controllers\MainController"  //controller a appeler via le namespace
     ], "main-home" );    
 
-//DETAIL
+//DETAIL: Un personnage SOLO
 $router->map( "GET", "/detail/[i:Pokemon_id]",[
     "method"     => "detail", //nom de la méthode a appeler
     "controller" => "App\Controllers\MainController" //controller a appeler via le namespace
     ]
     ,  "main-detail" );
+
+//TYPE_LIST: tous les types
+$router->map( "GET", "/type_list",[
+    "method"     => "type_list", //nom de la méthode a appeler
+    "controller" => "App\Controllers\MainController" //controller a appeler via le namespace
+    ]
+    ,  "main-type_list" );
+
 
 
 // faire correspondre une URL et une route: il faut faire un match

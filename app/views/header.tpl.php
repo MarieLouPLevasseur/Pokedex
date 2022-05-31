@@ -19,7 +19,7 @@
     <a class="nav-link active" href="<?= $viewData['router']->generate('main-home') ?>">Pokédex</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="<?= $viewData['router']->generate('main-home') ?>">Liste Types/liens faux a changer</a>
+    <a class="nav-link" href="<?= $viewData['router']->generate('main-type_list') ?>">Liste Types</a>
   </li>
 </ul>
     </header>

@@ -1,6 +1,6 @@
 <section class="Solo-card">
 
-    <h1 classe="title"><?= $viewData['currentPokemon']->getName() ?></h1>
+    <h1 classe="title">Détails de <?= $viewData['currentPokemon']->getName() ?></h1>
 
     <div class="container">
         <div class="image-current">
