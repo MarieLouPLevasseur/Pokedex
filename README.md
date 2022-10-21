@@ -5,7 +5,7 @@
 
 ## Exercice réalisé en autonomie
 
-Dynamisation données d'un pokédex
+Reproduction et dynamisation d'un pokédex
 - PHP
 - MySQL
 - HTML et CSS
